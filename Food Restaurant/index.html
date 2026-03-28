@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biriyani Paradise</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <div class="logo">Biriyani Paradise</div>
+        <div class="cart-btn" onclick="toggleCart()">
+            🛒
+            <span id="cartCount">0</span>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero hero-alt">
+        <div class="hero-text">
+            <h1>Experience the True Taste of Biriyani</h1>
+            <p>
+                Savor our slow-cooked dum biriyani, made with tender meats, aromatic spices, and fresh ingredients for
+                an
+                unforgettable flavor.
+            </p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn-primary">Order Online</a>
+            </div>
+        </div>
+
+        <div class="hero-img">
+            <img src="images/biriyani.jpg" alt="Biriyani Dish">
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <p>
+                Explore our variety of delicious biriyanis and starters, crafted with fresh ingredients,
+                authentic spices, and love in every dish.
+            </p>
+    
+            <div class="menu-grid">
+    
+                <!-- Non-Veg Starters -->
+                <div class="menu-category">
+                    <h3>Non-Veg Starters</h3>
+                    <div class="menu-items-grid">
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Chilli Chicken"
+                            data-price="799"
+                            data-img="images/chilli-chicken.jpg"
+                            data-desc="Spicy and crispy chicken tossed in flavorful sauces with onions and peppers.">
+                            <img src="images/chilli-chicken.jpg" alt="Chilli Chicken">
+                            <h4>Chilli Chicken</h4><span class="price">₹799</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Chicken Nuggles"
+                            data-price="599"
+                            data-img="images/chicken-nuggles.jpg"
+                            data-desc="Golden fried chicken nuggles, crispy outside and juicy inside.">
+                            <img src="images/chicken-nuggles.jpg" alt="Chicken Nuggles">
+                            <h4>Chicken Nuggles</h4><span class="price">₹599</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Chicken Cutlet"
+                            data-price="999"
+                            data-img="images/chicken-cutlet.jpg"
+                            data-desc="Spiced minced chicken patties shallow fried until golden and crunchy.">
+                            <img src="images/chicken-cutlet.jpg" alt="Chicken Cutlet">
+                            <h4>Chicken Cutlet</h4><span class="price">₹999</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Chicken 65"
+                            data-price="699"
+                            data-img="images/chicken-65.jpg"
+                            data-desc="Deep-fried chicken bites marinated with bold spices and curry leaves.">
+                            <img src="images/chicken-65.jpg" alt="Chicken 65">
+                            <h4>Chicken 65</h4><span class="price">₹699</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Chicken Lollipop"
+                            data-price="799"
+                            data-img="images/chicken-lollipop.jpg"
+                            data-desc="Juicy chicken wings fried to perfection and coated in a spicy, tangy glaze.">
+                            <img src="images/chicken-lollipop.jpg" alt="Chicken Lollipop">
+                            <h4>Chicken Lollipop</h4><span class="price">₹799</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Lemon Chicken"
+                            data-price="799"
+                            data-img="images/lemon-chicken.jpg"
+                            data-desc="Tender chicken cooked in a tangy lemon sauce with a refreshing zing.">
+                            <img src="images/lemon-chicken.jpg" alt="Lemon Chicken">
+                            <h4>Lemon Chicken</h4><span class="price">₹799</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Chicken Manchurian"
+                            data-price="799"
+                            data-img="images/chicken-manchurian.jpg"
+                            data-desc="Crispy chicken pieces tossed in a rich Indo-Chinese garlic sauce.">
+                            <img src="images/chicken-manchurian.jpg" alt="Chicken Manchurian">
+                            <h4>Chicken Manchurian</h4><span class="price">₹799</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Chicken Stickes"
+                            data-price="799"
+                            data-img="images/chicken-stickes.jpg"
+                            data-desc="Crispy chicken sticks coated in seasoned breadcrumbs, perfect for snacking.">
+                            <img src="images/chicken-stickes.jpg" alt="Chicken Stickes">
+                            <h4>Chicken Stickes</h4><span class="price">₹799</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Dragon Chicken"
+                            data-price="799"
+                            data-img="images/dragon-chicken.jpg"
+                            data-desc="Crunchy chicken strips cooked in a fiery red sauce with capsicum and onions.">
+                            <img src="images/dragon-chicken.jpg" alt="Dragon Chicken">
+                            <h4>Dragon Chicken</h4><span class="price">₹799</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Chicken Wings"
+                            data-price="699"
+                            data-img="images/chicken-wings.jpg"
+                            data-desc="Crispy fried chicken wings seasoned with special house spices.">
+                            <img src="images/chicken-wings.jpg" alt="Chicken Wings">
+                            <h4>Chicken Wings</h4><span class="price">₹699</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Andhra Chicken Fry"
+                            data-price="799"
+                            data-img="images/andhra-chicken-fry.jpg"
+                            data-desc="Traditional Andhra-style chicken fry with intense spices and rustic flavors.">
+                            <img src="images/andhra-chicken-fry.jpg" alt="Andhra Chicken Fry">
+                            <h4>Andhra Chicken Fry</h4><span class="price">₹799</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Biriyanis -->
+                <div class="menu-category">
+                    <h3>Biriyanis</h3>
+                    <div class="menu-items-grid">
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Chicken Biriyani"
+                            data-price-half="699"
+                            data-price-full="1199"
+                            data-img="images/chicken-biriyani.jpg"
+                            data-desc="Aromatic dum biriyani made with tender chicken, long-grain basmati rice, and traditional spices slow-cooked to perfection.">
+                            <img src="images/chicken-biriyani.jpg" alt="Chicken Biriyani">
+                            <h4>Chicken Biriyani</h4><span class="price">½ KG ₹699 | 1 KG ₹1199</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Mutton Biriyani"
+                            data-price-half="799"
+                            data-price-full="1399"
+                            data-img="images/mutton-biriyani.jpg"
+                            data-desc="Rich and flavorful biriyani prepared with succulent mutton pieces, fragrant rice, and hand-picked spices.">
+                            <img src="images/mutton-biriyani.jpg" alt="Mutton Biriyani">
+                            <h4>Mutton Biriyani</h4><span class="price">½ KG ₹799 | 1 KG ₹1399</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Egg Biriyani"
+                            data-price-half="599"
+                            data-price-full="999"
+                            data-img="images/egg-biriyani.jpg"
+                            data-desc="Classic biriyani layered with perfectly boiled eggs, aromatic rice, and mildly spiced masala.">
+                            <img src="images/egg-biriyani.jpg" alt="Egg Biriyani">
+                            <h4>Egg Biriyani</h4><span class="price">½ KG ₹599 | 1 KG ₹999</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Fish Fry Biriyani"
+                            data-price-half="799"
+                            data-price-full="1499"
+                            data-img="images/fish-fry-biriyani.jpg"
+                            data-desc="Crispy fried fish layered with fragrant biriyani rice and coastal spices for a bold flavor experience.">
+                            <img src="images/fish-fry-biriyani.jpg" alt="Fish Fry Biriyani">
+                            <h4>Fish Fry Biriyani</h4><span class="price">½ KG ₹799 | 1 KG ₹1499</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Prawns Biriyani"
+                            data-price-half="1500"
+                            data-price-full="2499"
+                            data-img="images/prawns-biriyani.jpg"
+                            data-desc="Juicy prawns cooked with aromatic spices and basmati rice, delivering a rich and indulgent taste.">
+                            <img src="images/prawns-biriyani.jpg" alt="Prawns Biriyani">
+                            <h4>Prawns Biriyani</h4><span class="price">½ KG ₹1500 | 1 KG ₹2499</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Chicken Biriyani BL"
+                            data-price-half="799"
+                            data-price-full="1499"
+                            data-img="images/chicken-biriyani-bl.jpg"
+                            data-desc="Dum-style biriyani made with soft boneless chicken pieces and slow-cooked rice infused with spices.">
+                            <img src="images/chicken-biriyani-bl.jpg" alt="Chicken Biriyani BL">
+                            <h4>Chicken Biriyani (BL)</h4><span class="price">½ KG ₹799 | 1 KG ₹1499</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Chicken 65 Biriyani"
+                            data-price-half="799"
+                            data-price-full="1499"
+                            data-img="images/chicken-65-biriyani.jpg"
+                            data-desc="Spicy chicken 65 layered with flavorful biriyani rice for a perfect blend of crunch and aroma.">
+                            <img src="images/chicken-65-biriyani.jpg" alt="Chicken 65 Biriyani">
+                            <h4>Chicken 65 Biriyani</h4><span class="price">½ KG ₹799 | 1 KG ₹1499</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Paneer 65 Biriyani"
+                            data-price-half="599"
+                            data-price-full="999"
+                            data-img="images/paneer-65-biriyani.jpg"
+                            data-desc="Soft paneer 65 tossed with spices and layered with fragrant basmati rice for a delicious veg delight.">
+                            <img src="images/paneer-65-biriyani.jpg" alt="Paneer 65 Biriyani">
+                            <h4>Paneer 65 Biriyani</h4><span class="price">½ KG ₹599 | 1 KG ₹999</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Veg Biriyani"
+                            data-price-half="599"
+                            data-price-full="999"
+                            data-img="images/egg-biriyani.jpg"
+                            data-desc="A wholesome mix of fresh vegetables, aromatic spices, and long-grain rice cooked in traditional style.">
+                            <img src="images/egg-biriyani.jpg" alt="Egg Biriyani">
+                            <h4>Egg Biriyani</h4><span class="price">½ KG ₹599 | 1 KG ₹999</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Special Dine -->
+                <div class="menu-category">
+                    <h3>Special Dine Biriyani</h3>
+                    <div class="menu-items-grid">
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Omlette Mutton Biriyani"
+                            data-price="1200"
+                            data-img="images/omlette-mutton-biriyani.jpg"
+                            data-desc="Aromatic mutton biriyani served with a fluffy omelette for an extra layer of taste.">
+                            <img src="images/omlette-mutton-biriyani.jpg" alt="Omlette Mutton Biriyani">
+                            <h4>Omelette Mutton Biriyani</h4><span class="price">₹1200</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Omlette Chicken Biriyani"
+                            data-price="999"
+                            data-img="images/omlette-chicken-biriyani.jpg"
+                            data-desc="Flavorful chicken biriyani topped with a soft omelette for a unique and satisfying twist.">
+                            <img src="images/omlette-chicken-biriyani.jpg" alt="Omlette Chicken Biriyani">
+                            <h4>Omelette Chicken Biriyani</h4><span class="price">₹999</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Parda Chicken Biriyani"
+                            data-price="999"
+                            data-img="images/parda-chicken-biriyani.jpg"
+                            data-desc="Royal biriyani sealed in a thin bread layer, locking in rich aromas and flavors until served.">
+                            <img src="images/parda-chicken-biriyani.jpg" alt="Parda Chicken Biriyani">
+                            <h4>Parda Chicken Biriyani</h4><span class="price">₹999</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Parda Chicken/Mutton Keema Biriyani"
+                            data-price="1200"
+                            data-img="images/parda-chickenmutton-keema-biriyani.jpg"
+                            data-desc="Royal dum biriyani layered with richly spiced chicken or mutton keema, sealed in a thin bread parda to lock in deep aromas and flavors.">
+                            <img src="images/parda-chickenmutton-keema-biriyani.jpg" alt="Parda Chicken/Muuton Keema Biriyani">
+                            <h4>Parda Chicken/Mutton Keema Biriyani</h4><span class="price">₹1200</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Parda Paneer 65 Biriyani"
+                            data-price="999"
+                            data-img="images/parda-paneer-65-biriyani.jpg"
+                            data-desc="Soft paneer 65 layered with fragrant basmati rice and aromatic spices, sealed in a golden parda for a rich and indulgent experience.">
+                            <img src="images/parda-paneer-65-biriyani.jpg" alt="Parda Paneer 65 Biriyani">
+                            <h4>Parda Paneer 65 Biriyani</h4><span class="price">₹999</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Mandi Specials -->
+                <div class="menu-category">
+                    <h3>Mandi Specials</h3>
+                    <div class="menu-items-grid">
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Mandi Chicken Biriyani"
+                            data-price2pax="1199"
+                            data-price4pax="2200"
+                            data-img="images/mandi-chicken-biriyani.jpg"
+                            data-desc="Authentic mandi-style biriyani prepared with smoky basmati rice and slow-roasted chicken, infused with rich Arabic spice">
+                            <img src="images/mandi-chicken-biriyani.jpg" alt="Mandi Chicken Biriyani">
+                            <h4>Mandi Chicken Biriyani</h4><span class="price">2 Pax ₹1199 | 4 Pax ₹2200</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Mandi Mutton Biriyani"
+                            data-price2pax="1399"
+                            data-price4pax="2499"
+                            data-img="images/mandi-mutton-biriyani.jpg"
+                            data-desc="Traditional mandi biriyani made with tender mutton, aromatic rice, and deep smoky flavors cooked to perfection.">
+                            <img src="images/mandi-mutton-biriyani.jpg" alt="Mandi Mutton Biriyani">
+                            <h4>Mandi Mutton Biriyani</h4><span class="price">2 Pax ₹1399 | 4 Pax ₹2499</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Mandi Chicken Pilau"
+                            data-price4pax="1899"
+                            data-img="images/mandi-chicken-pilau.jpg"
+                            data-desc="Fragrant mandi-style pilau rice served with juicy slow-cooked chicken and mild Arabic spices.">
+                            <img src="images/mandi-chicken-pilau.jpg" alt="Mandi Chicken Pilau">
+                            <h4>Mandi Chicken Pilau</h4><span class="price">4 Pax ₹1899</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Mandi Mutton Pilau"
+                            data-price4pax="1999"
+                            data-img="images/mandi-mutton-pilau.jpg"
+                            data-desc="Rich and flavorful pilau rice paired with tender mutton, slow-cooked using traditional mandi techniques.">
+                            <img src="images/mandi-mutton-pilau.jpg" alt="Mandi Mutton Pilau">
+                            <h4>Mandi Mutton Pilau</h4><span class="price">4 Pax ₹1999</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Pilau -->
+                <div class="menu-category">
+                    <h3>Pilau Specials</h3>
+                    <div class="menu-items-grid">
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Plain Pilau"
+                            data-price-half="299"
+                            data-price-full="599"
+                            data-img="images/plain-pilau.jpg"
+                            data-desc="Light and aromatic basmati rice cooked with mild spices for a simple and comforting taste.">
+                            <img src="images/plain-pilau.jpg" alt="Plain Pilau">
+                            <h4>Plain Pilau</h4><span class="price">½ KG ₹299 | 1 KG ₹599</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Veg Pilau"
+                            data-price-half="399"
+                            data-price-full="699"
+                            data-img="images/veg-pilau.jpg"
+                            data-desc="Fragrant pilau rice cooked with fresh vegetables and subtle spices for a wholesome flavor.">
+                            <img src="images/veg-pilau.jpg" alt="Veg Pilau">
+                            <h4>Veg Pilau</h4><span class="price">½ KG ₹399 | 1 KG ₹699</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Chicken Pilau"
+                            data-price-half="599"
+                            data-price-full="999"
+                            data-img="images/chicken-pilau.jpg"
+                            data-desc="Soft basmati rice cooked with tender chicken pieces and mild spices for a rich, comforting meal.">
+                            <img src="images/chicken-pilau.jpg" alt="Chicken Pilau">
+                            <h4>Chicken Pilau</h4><span class="price">½ KG ₹599 | 1 KG ₹999</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Mutton Pilau"
+                            data-price-half="699"
+                            data-price-full="1199"
+                            data-img="images/mutton-pilau.jpg"
+                            data-desc="Flavorful pilau rice slow-cooked with tender mutton and traditional spices for a hearty experience.">
+                            <img src="images/mutton-pilau.jpg" alt="Mutton Pilau">
+                            <h4>Mutton Pilau</h4><span class="price">½ KG ₹699 | 1 KG ₹1199</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Platters -->
+                <div class="menu-category">
+                    <h3>Platter Specials</h3>
+                    <div class="menu-items-grid">
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Non Veg Biriyani Platter"
+                            data-price="3500"
+                            data-img="images/non-veg-biriyani-platter.jpg"
+                            data-desc="A grand platter featuring assorted non-veg biriyanis and starters, perfect for sharing and celebrations.">
+                            <img src="images/non-veg-biriyani-platter.jpg" alt="Non Veg Biriyani Platter">
+                            <h4>Non-Veg Biriyani Platter</h4><span class="price">₹3500</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Veg Biriyani Platter"
+                            data-price="2500"
+                            data-img="images/veg-biriyani-platter.jpg"
+                            data-desc="A wholesome platter of flavorful veg biriyanis and accompaniments, ideal for group dining.">
+                            <img src="images/veg-biriyani-platter.jpg" alt="Veg Biriyani Platter">
+                            <h4>Veg Biriyani Platter</h4><span class="price">₹2500</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Combos -->
+                <div class="menu-category">
+                    <h3>Biriyani Combos</h3>
+                    <div class="menu-items-grid">
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Non Veg Biriyani Combo"
+                            data-price="1999"
+                            data-img="images/non-veg-biriyani-combo.jpg"
+                            data-desc="A delicious combo of chicken biriyani paired with non-veg starters and sides for a complete meal.">
+                            <img src="images/non-veg-biriyani-combo.jpg" alt="Non Veg Biriyani Combo">
+                            <h4>Non-Veg Biriyani Combo</h4><span class="price">₹1999</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Veg Biriyani Combo"
+                            data-price="1499"
+                            data-img="images/veg-biriyani-combo.jpg"
+                            data-desc="A satisfying veg combo featuring aromatic veg biriyani with tasty vegetarian sides.">
+                            <img src="images/veg-biriyani-combo.jpg" alt="Veg Biriyani Combo">
+                            <h4>Veg Biriyani Combo</h4><span class="price">₹1499</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Non Veg Biriyani Family Combo"
+                            data-price="2999"
+                            data-img="images/non-veg-biriyani-family-combo.jpg"
+                            data-desc="A generous family-sized combo with biriyanis, starters, and sides to serve everyone at the table.">
+                            <img src="images/non-veg-biriyani-family-combo.jpg" alt="Non Veg Biriyani Family Combo">
+                            <h4>Non-Veg Biriyani Family Combo</h4><span class="price">₹2999</span>
+                        </div>
+                        <div class="menu-item"
+                            onclick="openProduct(this)"
+                            data-name="Veg Biriyani Family Combo"
+                            data-price="1999"
+                            data-img="images/veg-biriyani-family-combo.jpg"
+                            data-desc="A perfect family meal with veg biriyanis and accompaniments, made for sharing.">
+                            <img src="images/veg-biriyani-family-combo.jpg" alt="Veg Biriyani Family Combo">
+                            <h4>Veg Biriyani Family Combo</h4><span class="price">₹1999</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT MODAL -->
+    <div id="productModal" class="modal-overlay">
+        <div class="product-modal-card">
+            <span class="close-btn" onclick="closeModal()">×</span>
+    
+            <img id="modalImg" class="modal-img">
+            <h3 id="modalName"></h3>
+            <p id="modalDesc"></p>
+    
+            <!-- OPTIONS -->
+            <div id="optionBox" class="option-box"></div>
+    
+            <!-- QUANTITY -->
+            <div class="qty-control">
+                <button onclick="changeQty(-1)">−</button>
+                <span id="qty">1</span>
+                <button onclick="changeQty(1)">+</button>
+            </div>
+    
+            <h3 id="modalPrice">₹0</h3>
+    
+            <button class="add-cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay" onclick="closeCart()"></div>
+    
+    <!-- CART PANEL -->
+    <div id="cart" class="cart-panel">
+    
+        <h3 class="cart-title">Your Cart</h3>
+    
+        <!-- Scrollable items area -->
+        <div id="cartItems" class="cart-items"></div>
+    
+        <!-- Fixed bottom checkout section -->
+        <div class="cart-footer">
+            <div class="total-box">
+                <span>Total:</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            
+            <button type="button" class="checkout-btn" onclick="proceedToCheckout()">
+                Proceed to Checkout
+            </button>
+        </div>
+    
+    </div>
+    
+    <!-- CHECKOUT -->
+    <div id="checkoutSection" class="checkoutSection">
+    
+        <h3>Customer Details</h3>
+    
+        <input type="text" id="custName" placeholder="Full Name">
+        <input type="text" id="custPhone" placeholder="Phone Number">
+        <textarea id="custAddress" placeholder="Delivery Address"></textarea>
+    
+        <h3>Payment Method</h3>
+    
+        <div class="payment-options">
+            <label>
+                <input type="radio" name="payment" value="COD" checked onclick="renderPaymentFields()">
+                Cash on Delivery
+            </label>
+        
+            <label>
+                <input type="radio" name="payment" value="UPI" onclick="renderPaymentFields()">
+                UPI
+            </label>
+        
+            <label>
+                <input type="radio" name="payment" value="Card" onclick="renderPaymentFields()">
+                Debit / Credit Card
+            </label>
+        </div>
+
+        <div id="paymentFields"></div>
+        
+        <h3>Order Summary</h3>
+        <div id="checkoutSummary"></div>
+
+        <button class="place-order-btn" onclick="placeOrder()">
+            Place Order
+        </button>
+    </div>
+    
+    <!-- SUCCESS MESSAGE -->
+    <div id="successMessage" class="success-message">
+        <div class="success-content">
+            <h2>✅ Order Placed Successfully!</h2>
+            <p id="successText">Your delicious biriyani is on the way 🍗🍚</p>
+    
+            <div id="successSummary"></div> <!-- Optional: Receipt-like summary -->
+    
+            <button id="closeSuccessBtn" onclick="closeSuccess()">OK</button>
+        </div>
+    </div>
+
+
+    <!-- ABOUT MODAL -->
+    <div id="aboutModal" class="center-modal">
+        <div class="modal-box">
+            <span class="close-btn" onclick="closeAbout()">×</span>
+            <h2>About Us</h2>
+            <p>
+                Welcome to <b>Biriyani Paradise</b> 🍗🍚
+                We serve authentic Hyderabadi & Arabian mandi biriyanis made with
+                premium spices, slow-cooked meat, and love.
+            </p>
+    
+            <p>
+                Our chefs bring decades of experience to your plate — whether it’s
+                a family feast, party combo, or a solo craving.
+            </p>
+    
+            <p class="highlight">
+                Fresh • Authentic • Hygienic • Delivered Hot
+            </p>
+        </div>
+    </div>
+    
+    <!-- BOOK TABLE MODAL -->
+    <div id="bookModal" class="center-modal">
+        <div class="modal-box">
+            <span class="close-btn" onclick="closeBook()">×</span>
+            <h2>Book a Table</h2>
+    
+            <input type="text" placeholder="Full Name">
+            <input type="tel" placeholder="Mobile Number">
+            <input type="date">
+            <input type="time">
+            <select>
+                <option>No. of People</option>
+                <option>2 People</option>
+                <option>4 People</option>
+                <option>6 People</option>
+                <option>8+ People</option>
+            </select>
+    
+            <button class="btn-primary full" onclick="bookSuccess()">
+                Confirm Booking
+            </button>
+        </div>
+    </div>
+    
+    <!-- BOOK SUCCESS -->
+    <div id="bookSuccess" class="center-modal">
+        <div class="modal-box center">
+            <h2>✅ Table Booked</h2>
+            <p>We’re excited to serve you 🍽️</p>
+            <button class="btn-primary" onclick="closeBookSuccess()">Done</button>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation (Mobile Only) -->
+    <nav class="bottom-nav">
+        <a href="#home">
+            <i class="fa fa-home"></i><span>Home</span>
+        </a>
+    
+        <a href="#menu">
+            <i class="fa fa-utensils"></i><span>Menu</span>
+        </a>
+    
+        <!-- ABOUT MODAL -->
+        <a onclick="openAbout()" style="cursor:pointer;">
+            <i class="fa fa-info-circle"></i><span>About</span>
+        </a>
+    
+        <!-- BOOK TABLE MODAL -->
+        <a onclick="openBook()" style="cursor:pointer;">
+            <i class="fa fa-calendar"></i><span>Book</span>
+        </a>
+    </nav>
+
+    <!-- JavaScript -->
+    <script>
+        let quantity = 1;
+        let cart = [];
+        let selectedOption = "";
+        let unitPrice = 0;
+        let selectedProduct = null;
+
+        /* GET CORRECT PRICE */
+        function getProductPrice(el) {
+
+            // Normal items
+            if (el.dataset.price) {
+                return Number(el.dataset.price);
+            }
+
+            // Half / Full KG
+            if (el.dataset.priceHalf && el.dataset.priceFull) {
+                return Number(el.dataset.priceHalf); // default half
+            }
+
+            // Mandi (2 Pax / 4 Pax)
+            if (el.dataset.price2pax && el.dataset.price4pax) {
+                return Number(el.dataset.price2pax); // default 2 pax
+            }
+
+            return 0;
+        }
+
+        /* OPEN PRODUCT MODAL */
+        function openProduct(el) {
+
+                quantity = 1;
+
+                selectedProduct = {
+                    name: el.dataset.name,
+                    img: el.dataset.img,
+                    desc: el.dataset.desc,
+                    price: el.dataset.price ? Number(el.dataset.price) : null,
+                    half: el.dataset.priceHalf ? Number(el.dataset.priceHalf) : null,
+                    full: el.dataset.priceFull ? Number(el.dataset.priceFull) : null,
+                    pax2: el.dataset.price2pax ? Number(el.dataset.price2pax) : null,
+                    pax4: el.dataset.price4pax ? Number(el.dataset.price4pax) : null
+                };
+
+                document.getElementById("modalName").innerText = selectedProduct.name;
+                document.getElementById("modalDesc").innerText = selectedProduct.desc;
+                document.getElementById("modalImg").src = selectedProduct.img;
+                document.getElementById("qty").innerText = quantity;
+
+                buildOptions();
+
+                document.getElementById("productModal").style.display = "flex";
+            }
+
+            function renderCart() {
+
+                    const cartItems = document.getElementById("cartItems");
+                    const cartCount = document.getElementById("cartCount");
+                    const cartTotal = document.getElementById("cartTotal");
+
+                    cartItems.innerHTML = "";
+
+                    let total = 0;
+
+                    // If cart empty
+                    if (cart.length === 0) {
+                        cartItems.innerHTML = `
+            <div class="empty-cart">
+                🛒 Your cart is empty
+            </div>
+        `;
+                        cartTotal.innerText = "0";
+                        cartCount.innerText = "0";
+                        return;
+                    }
+
+                    cart.forEach((item, index) => {
+
+                        const itemTotal = Number(item.total) || 0;
+                        total += itemTotal;
+
+                        cartItems.innerHTML += `
+            <div class="cart-item">
+
+                <img src="${item.img}" class="cart-img">
+
+                <div class="cart-info">
+                    <div class="cart-name">${item.name}</div>
+                    <div class="checkout-qty">Qty: ${item.qty}</div>
+                </div>
+
+                <div class="cart-right">
+                    <div class="cart-price">₹${itemTotal}</div>
+                    <button class="remove-btn"
+                            onclick="removeFromCart(${index})">
+                        ✖
+                    </button>
+                </div>
+
+            </div>
+        `;
+                    });
+
+                    cartCount.innerText = cart.length;
+                    cartTotal.innerText = total;
+                }
+
+            /* BUILD OPTIONS */
+            function buildOptions() {
+
+                    const box = document.getElementById("optionBox");
+                    box.innerHTML = "";
+
+                    // 🟢 SINGLE PRICE
+                    if (selectedProduct.price !== null) {
+                        unitPrice = selectedProduct.price;
+                        updatePrice();
+                        return;
+                    }
+
+                    if (selectedProduct.half !== null && selectedProduct.full !== null) {
+
+                    box.innerHTML = `
+        <button onclick="selectOption(this, ${selectedProduct.half})">½ KG</button>
+        <button onclick="selectOption(this, ${selectedProduct.full})">1 KG</button>
+    `;
+
+                    setTimeout(() => {
+                        const firstBtn = box.querySelector("button");
+                        selectOption(firstBtn, selectedProduct.half);
+                    }, 0);
+
+                    return;
+                }
+
+                    if (selectedProduct.pax2 !== null && selectedProduct.pax4 !== null) {
+
+                    box.innerHTML = `
+        <button onclick="selectOption(this, ${selectedProduct.pax2})">2 Pax</button>
+        <button onclick="selectOption(this, ${selectedProduct.pax4})">4 Pax</button>
+    `;
+
+                    setTimeout(() => {
+                        const firstBtn = box.querySelector("button");
+                        selectOption(firstBtn, selectedProduct.pax2);
+                    }, 0);
+
+                    return;
+                }
+                }
+
+        /* CLOSE */
+        function closeModal() {
+            document.getElementById("productModal").style.display = "none";
+        }
+
+        function selectOption(btn, price) {
+                unitPrice = Number(price);
+
+                // Highlight selected button
+                const buttons = document.querySelectorAll("#optionBox button");
+                buttons.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                updatePrice();
+        }
+
+        function changeQty(change) {
+
+                quantity += change;
+
+                if (quantity < 1) {
+                    quantity = 1;
+                }
+
+                document.getElementById("qty").innerText = quantity;
+
+                updatePrice(); // recalculate total
+            }
+
+
+            function changeQty(change) {
+                    quantity += change;
+                    if (quantity < 1) quantity = 1;
+                    document.getElementById("qty").innerText = quantity;
+                    updatePrice();
+            }
+
+            function increaseQty(index) {
+                    cart[index].qty++;
+                    renderCart();
+                }
+
+                function decreaseQty(index) {
+                    if (cart[index].qty > 1) {
+                        cart[index].qty--;
+                    } else {
+                        cart.splice(index, 1);
+                    }
+                    renderCart();
+                }
+
+                function removeFromCart(index) {
+                    cart.splice(index, 1);
+                    renderCart();
+                }
+
+            /* PRICE */
+            function updatePrice() {
+                    document.getElementById("modalPrice").innerText =
+                        "₹" + (unitPrice * quantity);
+            }
+
+            /* ADD TO CART */
+            function addToCart() {
+                if (!unitPrice) {
+                    alert("Select option");
+                    return;
+                }
+
+                cart.push({
+                    name: selectedProduct.name,
+                    qty: quantity,
+                    total: unitPrice * quantity,
+                    img: selectedProduct.img,   // 🔥 THIS LINE IS IMPORTANT
+                });
+
+                renderCart(); 
+                closeModal();
+            }
+
+        /* CART UI */
+        function toggleCart() {
+            document.getElementById("cart").classList.toggle("open");
+        }
+
+        function updateCart() {
+                let cartItems = document.getElementById("cartItems");
+                let total = 0;
+                let totalQty = 0;
+
+                cartItems.innerHTML = "";
+
+                cart.forEach(item => {
+                    total += item.total;
+                    totalQty += item.qty;
+
+                    cartItems.innerHTML += `
+            <div>${item.name} × ${item.qty} — ₹${item.total}</div>
+        `;
+                });
+
+                document.getElementById("total").innerText = total;
+
+                const count = document.getElementById("cartCount");
+                if (count) count.innerText = totalQty;
+            }
+
+        function openCheckout() {
+            // document.getElementById("checkout").style.display = "flex";
+            document.getElementById("checkout").style.display = "block";
+            document.getElementById("cart").style.display = "none";
+        }
+
+        function backToCart() {
+
+                document.getElementById("checkout").style.display = "none";
+                document.getElementById("cart").style.display = "block";
+
+        }
+
+        function payNow() {
+            document.getElementById("checkout").style.display = "none";
+
+            setTimeout(() => {
+                document.getElementById("success").style.display = "flex";
+            }, 1500);
+        }
+
+        /* ABOUT */
+            function openAbout() {
+                document.getElementById("aboutModal").style.display = "flex";
+            }
+            function closeAbout() {
+                document.getElementById("aboutModal").style.display = "none";
+            }
+
+            /* BOOK */
+            function openBook() {
+                document.getElementById("bookModal").style.display = "flex";
+            }
+            function closeBook() {
+                document.getElementById("bookModal").style.display = "none";
+            }
+
+            function bookSuccess() {
+                document.getElementById("bookModal").style.display = "none";
+                document.getElementById("bookSuccess").style.display = "flex";
+            }
+
+            function closeBookSuccess() {
+                document.getElementById("bookSuccess").style.display = "none";
+            }
+
+            function proceedToCheckout() {
+
+                    if (!cart || cart.length === 0) {
+                        alert("Your cart is empty.");
+                        return;
+                    }
+
+                    document.getElementById("cart").style.display = "none";
+                    document.getElementById("overlay").style.display = "none";
+
+                    document.getElementById("checkoutSection").classList.add("active");
+
+
+                    let summary = document.getElementById("checkoutSummary");
+                summary.innerHTML = "";
+
+                let total = 0;
+
+                cart.forEach(item => {
+                    total += item.total;
+
+                    summary.innerHTML += `
+        <div style="display:flex; justify-content:space-between; margin-bottom:8px; color:black;">
+            <span>${item.name} × ${item.qty}</span>
+            <span>₹${item.total}</span>
+        </div>
+    `;
+                });
+
+                summary.innerHTML += `
+    <hr>
+    <div style="display:flex; justify-content:space-between; font-weight:600; color:black;">
+        <span>Total</span>
+        <span>₹${total}</span>
+    </div>
+`;
+                }
+
+           /* function proceedToCheckout() {
+
+                    if (cart.length === 0) {
+                        alert("Your cart is empty.");
+                        return;
+                    }
+
+                    // Close cart properly
+                    document.getElementById("cart").classList.remove("active");
+                    document.getElementById("overlay").classList.remove("active");
+
+                    // Show checkout section
+                    document.getElementById("checkoutSection").style.display = "block";
+
+                    renderCheckout();
+                }*/
+
+                function placeOrder() {
+                        const name = document.getElementById("custName").value;
+                        const phone = document.getElementById("custPhone").value;
+                        const address = document.getElementById("custAddress").value;
+                        const paymentSelected = document.querySelector('input[name="payment"]:checked');
+                        const paymentMethod = paymentSelected ? paymentSelected.value : "";
+
+                        if (!name || !phone || !address) {
+                            alert("Please fill all customer details.");
+                            return;
+                        }
+
+                        if (cart.length === 0) {
+                            alert("Your cart is empty.");
+                            return;
+                        }
+
+                        // Hide checkout section
+                        document.getElementById("checkoutSection").style.display = "none";
+
+                        // Render success message
+                        const success = document.getElementById("successMessage");
+                        const orderId = "ORD" + Math.floor(Math.random() * 1000000);
+
+                        document.getElementById("successText").innerText =
+                            `Thank You \n Your delicious biriyani is on the way 🍗🍚\nOrder ID: ${orderId}\nPayment: ${paymentMethod}`;
+
+                        const summary = document.getElementById("successSummary");
+                        summary.innerHTML = "";
+                        cart.forEach(item => {
+                            summary.innerHTML += `<div>${item.name} × ${item.qty} — ₹${item.total}</div>`;
+                        });
+
+                        success.classList.add("show"); // <-- This makes it visible
+
+                        // Clear cart and reset
+                        cart = [];
+                        renderCart();
+                        updateCart();
+                        document.getElementById("custName").value = "";
+                        document.getElementById("custPhone").value = "";
+                        document.getElementById("custAddress").value = "";
+                        document.getElementById("paymentFields").innerHTML = "";
+                    }
+
+                    function closeSuccess() {
+                        document.getElementById("successMessage").classList.remove("show");
+                    }
+
+                function renderPaymentFields() {
+                        const paymentSelected = document.querySelector('input[name="payment"]:checked');
+                        const paymentMethod = paymentSelected ? paymentSelected.value : "";
+                        const paymentFields = document.getElementById("paymentFields");
+
+                        if (paymentMethod === "UPI") {
+                            paymentFields.innerHTML = `
+            <input type="text" id="upiId" placeholder="Enter UPI ID">
+        `;
+                        } else if (paymentMethod === "Card") {
+                            paymentFields.innerHTML = `
+            <input type="text" id="cardNumber" placeholder="Card Number">
+            <input type="text" id="expiry" placeholder="MM/YY">
+            <input type="text" id="cvv" placeholder="CVV">
+        `;
+                        } else {
+                            paymentFields.innerHTML = ""; // COD has no extra fields
+                        }
+                    }
+
+                    document.getElementById("closeSuccessBtn").addEventListener("click", function () {
+                            document.getElementById("successMessage").style.display = "none";
+                        });
+    </script>
+</body>
+</html>
